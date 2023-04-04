@@ -8,9 +8,9 @@ const logoUrl =
 const Sidebar = () => {
   const { isSidebarOpen, closeSidebar } = useGlobalContext();
   return (
-    <aside className='sidebar'>
+    <aside className={isSidebarOpen ? 'sidebar show-modal' : 'sidebar'}>
       <div className='sidebar-header'>
-        <img src={logoUrl} alt='logo' style={{ height: '80px' }} />
+        <img src={logoUrl} alt='logo' className='logo-img' />
         <button className='close-btn' onClick={closeSidebar}>
           <FaTimes />
         </button>

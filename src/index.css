@@ -351,6 +351,15 @@ main {
   box-shadow: var(--red-dark);
   transition: var(--transition);
   /* toggle  */
+  transform: translateX(-100%);
+}
+
+.show-modal {
+  transform: translate(0);
+}
+
+.logo-img {
+  height: 70px;
 }
 
 @media screen and (min-width: 676px) {
