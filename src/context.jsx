@@ -1,5 +1,4 @@
 import { useState, createContext, useContext } from 'react';
-import { data } from './data';
 
 const AppContext = createContext();
 
@@ -29,7 +28,6 @@ export const AppProvider = ({ children }) => {
         closeSidebar,
         openModal,
         closeModal,
-        data,
       }}
     >
       {children}

@@ -257,3 +257,81 @@ ul {
 Project CSS
 ===============
 */
+main {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: var(--grey-100);
+}
+
+.sidebar-toggle {
+  position: fixed;
+  top: 2rem;
+  left: 3rem;
+  font-size: 2rem;
+  background: transparent;
+  border-color: transparent;
+  color: var(--primary-500);
+  cursor: pointer;
+  animation: bounce 2s ease-in-out infinite;
+}
+
+@keyframes bounce {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.5);
+  }
+  100% {
+    transform: translateY(1);
+  }
+}
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: grid;
+  place-items: center;
+  z-index: -1;
+  visibility: hidden;
+  opacity: 0;
+}
+
+.show-modal {
+  opacity: 1;
+  visibility: visible;
+  z-index: 10;
+  transition-property: opacity;
+  transition-duration: 1.1s;
+}
+
+.modal-container {
+  background: var(--white);
+  width: 90vw;
+  height: 30vh;
+  max-width: var(--fixed-width);
+  border-radius: var(--borderRadius);
+  box-shadow: var(--shadow-2);
+  text-align: center;
+  display: grid;
+  place-items: center;
+
+  /* padding: 2rem 2.5rem; */
+  position: relative;
+}
+
+.close-modal-btn {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  font-size: 2rem;
+  background: transparent;
+  border-color: transparent;
+  color: var(--red-dark);
+}
